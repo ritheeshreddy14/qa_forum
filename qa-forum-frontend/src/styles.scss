@@ -1,0 +1,328 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { 
+  height: 100%; 
+  margin: 0;
+  background-color: #f8fafc;
+}
+
+body { 
+  margin: 0; 
+  font-family: 'Roboto', "Helvetica Neue", sans-serif; 
+}
+
+// App Layout & Navigation
+mat-toolbar.mat-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  padding: 0 24px;
+  height: 80px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  button.mat-mdc-button {
+    height: 80px;
+    padding: 0 24px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    &.active {
+      background-color: rgba(255,255,255,0.15);
+      font-weight: 500;
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto 20px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.mat-mdc-card {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+} 
+
+.question-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin: 0 0 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+}
+
+.filters-toolbar {
+    background: #ffffff;
+    padding: 16px 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-field {
+    flex: 1;
+    margin-bottom: -1.25em;
+    
+    .mat-mdc-form-field-wrapper {
+      padding-bottom: 0;
+    }
+}
+
+.sort-field {
+    width: 140px;
+    margin-bottom: -1.25em;
+}
+
+.content {
+    padding: 24px;
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f8fafc;
+}
+
+.questions-container {
+    margin-top: 20px;
+}
+
+.active-filters-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+}
+
+.active-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+  
+  mat-chip-listbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  mat-chip {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    font-size: 0.875rem;
+    height: 28px !important;
+    margin: 0 !important;
+    
+    mat-icon {
+      opacity: 0.8;
+      font-size: 18px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
+
+.tag-select-field {
+  width: 200px; 
+  margin-bottom: -1.25em;
+  
+  .mat-mdc-form-field-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.question-card {
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    mat-card-header {
+      padding: 16px 16px 0;
+      
+      mat-card-title {
+        font-size: 1.25rem;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-weight: 500;
+        padding: 4px 16px;
+      }
+    }
+
+    mat-card-content {
+      padding: 4px 16px;
+      
+      p {
+        color: #4a5568;
+        line-height: 1.6;
+        margin: 0 0 16px;
+        padding: 4px 16px;
+      }
+    }
+}
+
+.tags {
+    margin-top: 12px;
+    padding: 4px 16px;
+    
+    mat-chip-listbox {
+      gap: 8px;
+    }
+
+    mat-chip {
+      background-color: #e2e8f0 !important;
+      color: #4a5568 !important;
+      font-size: 0.875rem;
+      height: 24px !important;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: #cbd5e1 !important;
+        transform: translateY(-1px);
+      }
+    }
+}
+
+.footer-date {
+    margin-left: 16px;
+    display: inline-block;
+    padding: 12px 16px;
+    color: #64748b;
+    font-size: 0.875rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.no-results {
+    text-align: center;
+    color: #64748b;
+    padding: 48px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    
+    p {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    button {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+}
+
+mat-chip {
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.loading-spinner {
+    margin: 48px auto;
+    
+    ::ng-deep circle {
+      stroke: #3b82f6;
+    }
+}
+
+.debug-info {
+    text-align: center;
+    margin: 48px 0;
+    
+    p {
+      color: #64748b;
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    button {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+}
+
+.question-details {
+    padding: 20px;
+}
+
+.answer-card {
+    margin-top: 20px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.question-form {
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+mat-form-field {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,5 @@
+/qa-forum-frontend/package-lock.json
+/qa-forum-backend/package-lock.json
+node_modules
+.angular
+.env
