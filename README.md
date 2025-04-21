@@ -42,7 +42,7 @@ A web-based discussion forum where users can post questions, reply to discussion
     After logging into your sql server, you can do that using below commands,
     
     ```
-    CREATE USER 'qauser'@'localhost' IDENTIFIED BY 'password';
+    CREATE USER 'qauser'@'localhost' IDENTIFIED BY '<Add Your Password Here>';
     GRANT ALL PRIVILEGES ON database.* TO 'qauser'@'localhost';
     FLUSH PRIVILEGES;
     SHOW GRANTS FOR 'qauser'@'localhost';
@@ -98,6 +98,14 @@ A web-based discussion forum where users can post questions, reply to discussion
 - PUT /api/answers/:id/like - Like an answer
 - DELETE /api/answers/:id - Delete an answer
 
-## Contributing
+## App Screenshots
+![WhatsApp Image 2025-04-20 at 08 29 28_4cb3e236](https://github.com/user-attachments/assets/7edd784a-c851-431c-b432-bc25e35d4aa5)
 
-1. Fork the repository or create PR and document it;
+
+![WhatsApp Image 2025-04-20 at 08 29 44_1d6208ca](https://github.com/user-attachments/assets/39f45440-5dd0-4e24-8038-a8b45e60a4b2)
+
+
+![WhatsApp Image 2025-04-20 at 08 30 00_b2f0122f](https://github.com/user-attachments/assets/bcf6591b-35d2-4a71-a7a2-6b28bec27804)
+
+
+![WhatsApp Image 2025-04-20 at 08 30 38_fb8c32e7](https://github.com/user-attachments/assets/bb6dbdce-a49d-40fb-b2d5-d000da7c0e36)
