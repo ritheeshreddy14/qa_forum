@@ -1,6 +1,8 @@
 # QA Forum
 
 A web-based discussion forum where users can post questions, reply to discussions, and like answers.
+##Flow of the Project
+-https://app.eraser.io/workspace/G7yULMEdOmQp8rlV2hgH
 
 ## Features
 
